@@ -3,13 +3,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
-gem 'rails', '~> 6.0.1'
+gem 'rails', '~> 5.2'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'cartify', github: 'CraftAcademy/cartify', branch: 'rails_5_2'
 
 group :development, :test do
   gem 'rspec-rails'
