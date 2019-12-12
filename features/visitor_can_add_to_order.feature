@@ -1,3 +1,4 @@
+@javascript
 Feature: Visitor can add products to the cart
   As a visitor,
   In order to select products I want to buy
