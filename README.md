@@ -1,7 +1,5 @@
 # SlowFood Application
 
-[![Coverage Status](https://coveralls.io/repos/github/CraftAcademy/slowfood-october-2019/badge.svg?branch=development)](https://coveralls.io/github/CraftAcademy/slowfood-october-2019?branch=development)
-
 SlowFood is a web applitcation that users can use to create accounts and navigate through a simulated food delivery service. They may add items to cart to create an order and review their order. The owner of the store may also sign up with future functionality to modify menus.
 
 ## Deployed Site
