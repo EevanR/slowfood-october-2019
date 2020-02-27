@@ -36,3 +36,7 @@ end
 Given('(I/He/She) (am/is) on the owner sign-in page') do
   visit new_owner_session_path
 end
+
+Given("I fill in {string} with {int}") do |input, int|
+  fill_in input, with: int
+end
