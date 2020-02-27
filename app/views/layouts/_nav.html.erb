@@ -25,6 +25,7 @@
         <ul class="navbar-nav ml-auto">
           <% if owner_signed_in? %>
             <li class="nav-link"><%= link_to 'Owner Logout', destroy_owner_session_path, method: :delete, class: 'navbar-brand' %></li>
+            <li class="nav-link"><%= link_to "Add Menu Item", new_product_path, class: 'navbar-brand' %><li>
           <% else %>
               <li class="nav-link"><%= link_to "Owner Log In", new_owner_session_path, class: 'navbar-brand' %><li>
           <% end %>
