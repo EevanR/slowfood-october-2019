@@ -9,3 +9,7 @@ end
 Given("he should have {int} orders") do |int|
   expect(@user.orders.count).to eq int
 end
+
+Then("cart should be empty") do
+  expect(OrderItem.count).to eq 0
+end

@@ -7,6 +7,8 @@
       <br />
       Quantity: <%= order_item.quantity %>
       Price: <%= number_to_currency order_item.item.price, unit: "kr", separator: ",", format: "%n %u" %>
+      <br />
+      <%= link_to 'Delete Item', order_item, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
   <% end %>
 <div class="totalPrice">

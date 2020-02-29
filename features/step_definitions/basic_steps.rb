@@ -29,10 +29,6 @@ Given('{string} has ordered products in the past') do |email|
   user.orders.last.update_attribute(:active, false)
 end
 
-Then('stop') do
-  binding.pry
-end
-
 Given('(I/He/She) (am/is) on the owner sign-in page') do
   visit new_owner_session_path
 end
