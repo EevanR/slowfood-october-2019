@@ -14,4 +14,4 @@ Feature: Owner can log in
     And I fill in "Password" with "password"
     And I click on "Log in"
     Then I should be on the landing page
-    And I should see "Welcome greta@greta.com"
+    And I should see "Welcome Owner: greta@greta.com"
