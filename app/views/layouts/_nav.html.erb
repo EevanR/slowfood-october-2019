@@ -28,7 +28,7 @@
             <li class="nav-link"><%= link_to "Add Menu Item", new_product_path, class: 'navbar-brand' %><li>
           <% else %>
             <% unless user_signed_in? %>
-              <li class="nav-link"><%= link_to "Owner Log In", new_owner_session_path, class: 'navbar-brand' %><li>
+              <li class="nav-link"><%= link_to "Owner Login", new_owner_session_path, class: 'navbar-brand' %><li>
             <% end %>
           <% end %>
           <% unless owner_signed_in? || user_signed_in? %>
