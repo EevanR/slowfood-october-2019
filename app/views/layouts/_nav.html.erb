@@ -4,8 +4,8 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-link"><%= link_to 'Menu', root_path, class: 'navbar-brand' %><li>
           <li class="nav-link">
-          <% unless user_signed_in? %>
-            <%= link_to 'Login', new_user_session_path, class: 'navbar-brand' %><li>
+          <% unless user_signed_in? || owner_signed_in? %>
+            <%= link_to 'Customer Login', new_user_session_path, class: 'navbar-brand' %><li>
           <% end %>
           <li class="nav-link">
             <% if user_signed_in? %>
@@ -27,9 +27,13 @@
             <li class="nav-link"><%= link_to 'Owner Logout', destroy_owner_session_path, method: :delete, class: 'navbar-brand' %></li>
             <li class="nav-link"><%= link_to "Add Menu Item", new_product_path, class: 'navbar-brand' %><li>
           <% else %>
+            <% unless user_signed_in? %>
               <li class="nav-link"><%= link_to "Owner Log In", new_owner_session_path, class: 'navbar-brand' %><li>
+            <% end %>
           <% end %>
-          <li class="nav-link"><%= link_to 'Signup', new_user_registration_path, class: 'navbar-brand' %><li>
+          <% unless owner_signed_in? || user_signed_in? %>
+            <li class="nav-link"><%= link_to 'Signup', new_user_registration_path, class: 'navbar-brand' %><li>
+          <% end %>
         </ul>
     </div>
 </nav>

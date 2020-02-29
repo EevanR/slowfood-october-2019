@@ -40,3 +40,7 @@ end
 Given("I fill in {string} with {int}") do |input, int|
   fill_in input, with: int
 end
+
+Then("I select {string} from {string}") do |value, string|
+  select value, :from => string 
+end

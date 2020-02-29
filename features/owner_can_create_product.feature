@@ -21,12 +21,12 @@ Feature: Owner can create products
     And I fill in "Password" with "password"
     And I click on "Log in"
     Then I should be on the landing page
-    And I should see "Welcome greta@greta.com"
+    And I should see "Welcome Owner: greta@greta.com"
     And I click on "Add Menu Item"
     And I fill in "Name" with "Vegan Burger"
     And I fill in "Description" with "No meat! All flavor!"
     And I fill in "Price" with 149
-    And I fill in "Category" with "Main"
+    And I select "Main" from "Category"
     And I click on "Add product"
     Then I should be on the landing page
     And I should see "Product added to menu."

@@ -1,9 +1,9 @@
 <% if owner_signed_in? %>
-  <h3 id="owner">Welcome <%= current_owner.email %>!</h3>
+  <h3 id="owner">Welcome Owner: <%= current_owner.email %></h3>
 <% end %>
 
 <div id="topPicks">
-  <h1>Greta's Top Picks</h1>
+  <h1>Greta's Menu of the Day</h1>
 </div>
 <% @categories.each do |category| %>
     <div class="card">

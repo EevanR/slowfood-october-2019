@@ -1,4 +1,4 @@
-<h2>Create Item!</h2>
+<h2>Add Item</h2>
 <%= form_with model: @product do |form|%>
   <%= form.label :name %>
   <%= form.text_field :name %>
@@ -7,7 +7,7 @@
   <%= form.label :price %>
   <%= form.text_field :price %>
   <%= form.label :category %>
-  <%= form.text_field :category%>
+  <%= form.select :category, ['Starter', 'Main', 'Desert']%>
 
   <%= form.submit "Add product" %>
 <% end %> 

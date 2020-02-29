@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
     if product.persisted?
       redirect_to root_path, notice: "Product added to menu."
     else
-      redirect_to new_products_path, notice: "Something went wrong. #{product.errors.full_messages.to_sentence}"
+      redirect_to new_product_path, notice: "Something went wrong. #{product.errors.full_messages.to_sentence}"
     end
   end
 
