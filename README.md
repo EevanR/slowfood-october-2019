@@ -66,7 +66,7 @@ I would like be able to see a list on an order details page
 ## Setup
 #### Clone repository
 ```
-$ git clone https://github.com/EevanR/slowfood-october-2019.git
+$ git clone https://github.com/CraftAcademy/slowfood-october-2019.git
 $ cd slowfood-october-2019
 ```
 
