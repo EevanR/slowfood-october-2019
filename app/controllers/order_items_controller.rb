@@ -15,6 +15,13 @@ class OrderItemsController < ApplicationController
     end
   end
 
+  def destroy
+    item = OrderItem.find(params[:id])
+    item.destroy
+    redirect_to order_item_path(current_user.orders.ids), notice: 'Item has been removed from cart.' 
+  end
+
+
   def show
     @order = current_user.orders.last
     @order_items = @order.shopping_cart_items

@@ -7,20 +7,16 @@ img {
   margin-top: 5em;
 }
 
-h2 {
-  background-color: rgb(250, 237, 237);
-}
-
-#owner {
-  background-color: rgba(232, 228, 228, 1);
-}
-
 .container {
+  padding: 2%;
   text-align: center;
-  padding-left: 5%;
-  padding-right: 5%;
-  max-width: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  max-width: 90%;
   font-size: larger;
+  margin-bottom: 5%;
+  background-color: rgba(252, 251, 250, 0.95);
+  border: 1px solid grey;
 }
 
 #green {
@@ -29,7 +25,6 @@ h2 {
 }
 
 #topPicks {
-  background-color: rgba(232, 228, 228, 1);
   width: 100%;
   margin-bottom: 20px;
 }
@@ -53,11 +48,11 @@ h2 {
 
 .notice {
   font-size: 20px;
-  background-color: darkgray;
+  background-color: lightgray;
+  text-align: center;
 }
 
 form {
-  background-color: rgb(250, 237, 237);
   padding: 20px;
   border-radius: 15px;
 }
@@ -77,4 +72,8 @@ form {
   padding: 20px;
   border-radius: 15px;
   margin-bottom: 30px;
+}
+
+nav {
+  z-index: 100;
 }

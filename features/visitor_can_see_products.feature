@@ -12,7 +12,7 @@ Feature: User can see products in different categories
     And I am on the landing page
 
   Scenario: Can see products in different categories
-    Then I should see "Greta's Top Picks"
+    Then I should see "Greta's Menu of the Day"
     And I should see "starter"
     And I should see "Starter 1"
     And I should see "First course"

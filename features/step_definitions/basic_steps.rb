@@ -29,10 +29,14 @@ Given('{string} has ordered products in the past') do |email|
   user.orders.last.update_attribute(:active, false)
 end
 
-Then('stop') do
-  binding.pry
-end
-
 Given('(I/He/She) (am/is) on the owner sign-in page') do
   visit new_owner_session_path
+end
+
+Given("I fill in {string} with {int}") do |input, int|
+  fill_in input, with: int
+end
+
+Then("I select {string} from {string}") do |value, string|
+  select value, :from => string 
 end

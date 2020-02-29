@@ -1,0 +1,13 @@
+<h2>Add Item</h2>
+<%= form_with model: @product do |form|%>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :description %>
+  <%= form.text_field :description %>
+  <%= form.label :price %>
+  <%= form.text_field :price %>
+  <%= form.label :category %>
+  <%= form.select :category, ['Starter', 'Main', 'Desert']%>
+
+  <%= form.submit "Add product" %>
+<% end %> 
