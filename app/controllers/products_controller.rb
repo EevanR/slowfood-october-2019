@@ -26,6 +26,16 @@ class ProductsController < ApplicationController
     redirect_to root_path, notice: 'Item has been removed from menu.' 
   end
 
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product = Product.find(params[:id])
+    @product.update(name: params[:product][:name], description: params[:product][:description], price: params[:product][:price])
+    redirect_to root_path, notice: "Item has been updated."
+  end
+
   private
 
   def product_params

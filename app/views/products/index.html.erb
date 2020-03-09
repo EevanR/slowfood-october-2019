@@ -15,6 +15,7 @@
               <li><%= product.description %></li>
               <li><%= product.price %> SEK</li>
               <% if owner_signed_in? %>
+                <%= button_to 'Update Item', edit_product_path(id: product.id), method: :get, class: 'update-brand' %>
                 <%= button_to 'Delete Item', product_path(id: product.id), method: :delete, data: { confirm: "Are you sure you want to delete #{product.name} from the menu?" }  %>
               <% end %>
               <% if user_signed_in? %>
