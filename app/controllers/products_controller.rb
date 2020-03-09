@@ -20,6 +20,12 @@ class ProductsController < ApplicationController
     end
   end
 
+  def destroy
+    item = Product.find(params[:id])
+    item.destroy
+    redirect_to root_path, notice: 'Item has been removed from menu.' 
+  end
+
   private
 
   def product_params

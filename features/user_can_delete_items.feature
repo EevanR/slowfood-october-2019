@@ -1,4 +1,4 @@
-Feature: User can delete items
+Feature: User can delete items from order
   As a user,
   In order to correct order mistakes
   I would like to be able to delete items from my cart
