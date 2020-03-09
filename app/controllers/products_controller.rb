@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_owner!, :except => [:index]
 
   def index
     @categories = Category.all
