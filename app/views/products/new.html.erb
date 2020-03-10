@@ -1,13 +1,13 @@
 <h2>Add Item</h2>
 <%= form_with model: @product do |form|%>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <%= form.label :description %>
-  <%= form.text_field :description %>
-  <%= form.label :price %>
-  <%= form.text_field :price %>
+  <%= form.label :name %><br>
+  <%= form.text_field :name %><br>
+  <%= form.label :description %><br>
+  <%= form.text_area :description, :cols => "40" %><br>
+  <%= form.label :price %><br>
+  <%= form.text_field :price %><br>
   <%= form.label :category %>
-  <%= form.select :category, ['Starter', 'Main', 'Dessert']%>
+  <%= form.select :category, ['Starter', 'Main', 'Dessert']%><br>
 
   <%= form.submit "Add product" %>
 <% end %> 

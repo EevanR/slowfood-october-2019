@@ -77,3 +77,12 @@ form {
 nav {
   z-index: 100;
 }
+
+#product-buttons {
+  display: inline-block;
+}
+
+.update-item {
+  float: left;
+  margin-right: 5px;
+}

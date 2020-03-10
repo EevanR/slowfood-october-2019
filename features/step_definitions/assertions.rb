@@ -13,3 +13,7 @@ end
 Then("cart should be empty") do
   expect(OrderItem.count).to eq 0
 end
+
+Then("there should be {int} items on menu") do |int|
+  expect(Product.count).to eq int
+end

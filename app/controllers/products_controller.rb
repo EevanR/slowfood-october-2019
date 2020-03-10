@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_owner!, :except => [:index]
 
   def index
     @categories = Category.all
@@ -18,6 +19,22 @@ class ProductsController < ApplicationController
     else
       redirect_to new_product_path, notice: "Something went wrong. #{product.errors.full_messages.to_sentence}"
     end
+  end
+
+  def destroy
+    item = Product.find(params[:id])
+    item.destroy
+    redirect_to root_path, notice: 'Item has been removed from menu.' 
+  end
+
+  def edit
+    @product = Product.find(params[:id])
+  end
+
+  def update
+    @product = Product.find(params[:id])
+    @product.update(name: params[:product][:name], description: params[:product][:description], price: params[:product][:price])
+    redirect_to root_path, notice: "Item has been updated."
   end
 
   private

@@ -14,6 +14,12 @@
             <ul>
               <li><%= product.description %></li>
               <li><%= product.price %> SEK</li>
+              <% if owner_signed_in? %>
+                <div id="product-buttons">
+                  <%= button_to 'Update Item', edit_product_path(id: product.id), method: :get, class: 'update-item' %>
+                  <%= button_to 'Delete Item', product_path(id: product.id), method: :delete, class: 'delete-item', data: { confirm: "Are you sure you want to delete #{product.name} from the menu?" } %>
+                <div>
+              <% end %>
               <% if user_signed_in? %>
                 <%= button_to 'Add to order', order_items_path(id: product.id) %>
               <% end %>
